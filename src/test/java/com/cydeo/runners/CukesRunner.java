@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
                   "me.jvt.cucumber.report.PrettyReports:target/cucumber"},
         features ="src/test/resources/features",
         glue = "com/cydeo/step_definitions",
-        tags = "@loginfunctionality",
+        tags = "@US77",
         dryRun = false,
         publish = true
 )
