@@ -9,7 +9,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-public class Login_StepDefinitions {
+public class US77_LogIn_StepDefs {
 
 
     LoginPage loginPage = new LoginPage();
@@ -36,33 +36,47 @@ public class Login_StepDefinitions {
     @Then("user should land on the dashboard page")
     public void userShouldLandOnTheDashboardPage() {
 
+
         Assert.assertTrue(Driver.getDriver().getTitle().contains("Portal"));
     }
 
+
     @When("user enters {string} in login field")
-    public void userEntersValidusernameInLoginField(String username) {
-
-        loginPage.txt_Login.sendKeys(username);
-    }
-
-    @And("user enters {string} in password field")
-    public void userEntersValidpasswordInPasswordField(String password) {
-
-        loginPage.txt_Password.sendKeys(password);
-    }
-
-
-    @When("user enters {string} in log-in field")
     public void userEntersInLogInField(String invalidLoginName) {
 
         loginPage.txt_Login.sendKeys(invalidLoginName);
     }
 
-    @And("user enters {string} in pass-word field")
+    @And("user enters {string} in password field")
     public void userEntersInPassWordField(String invalidPassword) {
 
         loginPage.txt_Password.sendKeys(invalidPassword);
     }
+
+
+    @When("user logs in as {string}")
+    public void userLogsInAs(String userType) {
+
+        String username = "";
+        String password = "";
+
+        if(userType.equals("Helpdesk")) {
+
+            username = ConfigurationReader.getProperty("helpdesk_username");
+            password = ConfigurationReader.getProperty("helpdesk_password");
+        } else if(userType.equals("Human Resource")) {
+
+            username = ConfigurationReader.getProperty("human_resource_username");
+            password = ConfigurationReader.getProperty("human_resource_password");
+        } else if(userType.equals("Marketing")) {
+
+            username = ConfigurationReader.getProperty("marketing_username");
+            password = ConfigurationReader.getProperty("marketing_password");
+        }
+
+        loginPage.logIn(username, password);
+    }
+
 
 
 }
