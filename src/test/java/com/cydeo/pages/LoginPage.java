@@ -12,8 +12,7 @@ public class LoginPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    // test commit and push to confirm up flow to our remote repo
-    // test #2 commit and push to confirm up flow to our remote repo
+
 
     @FindBy(xpath = "//input[@name='USER_LOGIN']")
     public WebElement txt_Login;
@@ -39,6 +38,13 @@ public class LoginPage {
     @FindBy(xpath = "//div[@class='errortext']")
     public WebElement incorrectLoginText;
 
+
+    public void logIn(String username, String password) {
+
+        txt_Login.sendKeys(username);
+        txt_Password.sendKeys(password);
+        btn_LogIn.click();
+    }
 
 
 
