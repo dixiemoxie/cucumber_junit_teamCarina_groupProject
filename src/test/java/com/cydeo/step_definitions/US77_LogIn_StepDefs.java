@@ -1,6 +1,6 @@
 package com.cydeo.step_definitions;
 
-import com.cydeo.pages.LoginPage;
+import com.cydeo.pages.LoginPage_JM;
 import com.cydeo.utils.ConfigurationReader;
 import com.cydeo.utils.Driver;
 import io.cucumber.java.en.And;
@@ -12,7 +12,7 @@ import org.junit.Assert;
 public class US77_LogIn_StepDefs {
 
 
-    LoginPage loginPage = new LoginPage();
+    LoginPage_JM loginPageJM = new LoginPage_JM();
 
     @Given("user is on the login page")
     public void user_is_on_the_login_page() {
@@ -24,13 +24,13 @@ public class US77_LogIn_StepDefs {
     @When("user clicks login button")
     public void user_clicks_login_button() {
 
-        loginPage.btn_LogIn.click();
+        loginPageJM.btn_LogIn.click();
     }
 
     @Then("user should see error message")
     public void user_should_see_error_message() {
 
-        Assert.assertTrue(loginPage.incorrectLoginText.isDisplayed());
+        Assert.assertTrue(loginPageJM.incorrectLoginText.isDisplayed());
     }
 
     @Then("user should land on the dashboard page")
@@ -44,13 +44,13 @@ public class US77_LogIn_StepDefs {
     @When("user enters {string} in login field")
     public void userEntersInLogInField(String invalidLoginName) {
 
-        loginPage.txt_Login.sendKeys(invalidLoginName);
+        loginPageJM.txt_Login.sendKeys(invalidLoginName);
     }
 
     @And("user enters {string} in password field")
     public void userEntersInPassWordField(String invalidPassword) {
 
-        loginPage.txt_Password.sendKeys(invalidPassword);
+        loginPageJM.txt_Password.sendKeys(invalidPassword);
     }
 
 
@@ -74,7 +74,7 @@ public class US77_LogIn_StepDefs {
             password = ConfigurationReader.getProperty("marketing_password");
         }
 
-        loginPage.logIn(username, password);
+        loginPageJM.logIn(username, password);
     }
 
 

@@ -5,9 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage extends BasePage{
+public class LoginPage_JM extends BasePage{
 
-    public LoginPage() {
+    public LoginPage_JM() {
 
         PageFactory.initElements(Driver.getDriver(), this);
     }
