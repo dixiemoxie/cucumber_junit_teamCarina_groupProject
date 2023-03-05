@@ -2,17 +2,21 @@ package com.cydeo.pages;
 
 import com.cydeo.utils.Driver;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import java.util.List;
 
 public abstract class BasePage {
+
 
     public BasePage() {
 
         PageFactory.initElements(Driver.getDriver(), this);
     }
+
+    @FindBy(xpath = "//span[@class='menu-item-link-text']")
+    public List<WebElement> listOfElementsOnLeftSideOfPage;
 
     @FindBy(xpath = "//span[contains(text(),'Activity Stream')]")
     public WebElement btn_activityStream;
@@ -36,7 +40,7 @@ public abstract class BasePage {
     public WebElement btn_mail;
 
     @FindBy(xpath = "//span[contains(text(),'Contact Center')]")
-    public WebElement btn_contactcenter;
+    public WebElement btn_contactCenter;
 
     @FindBy(xpath = "//span[contains(text(),'Time and Reports')]")
     public WebElement btn_timeAndReports;
@@ -56,9 +60,6 @@ public abstract class BasePage {
     @FindBy(xpath = "//span[contains(text(),'Configure menu')]")
     public WebElement btn_configureMenu;
 
-    @FindBy(xpath = "//span[@class='feed-up-text']")
-    public WebElement activityStream;
-
     @FindBy(xpath = "//span[contains(text(),'Tasks')]")
     public WebElement btn_up;
 
@@ -70,6 +71,9 @@ public abstract class BasePage {
 
     @FindBy(xpath = "//span[contains(text(),'Hide')]")
     public WebElement btn_hideHidden;
+
+    @FindBy(xpath = "//span[@class='feed-up-text']")
+    public WebElement activityStream;
 
 
 
