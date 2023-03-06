@@ -11,8 +11,6 @@ Feature: Login Functionality
     Then user should land on the dashboard page
 
 
-
-
   Scenario Outline: Verify user sees error message when logging in with invalid credentials
     When user enters "<invalidusername>" in login field
     And user enters "<invalidpassword>" in password field
@@ -21,9 +19,9 @@ Feature: Login Functionality
 
     Examples:
       | invalidusername               | invalidpassword |
-      | elpdesk1@cybertekschool.com   | User            |
+      | elpdesk1@cybertekschool.com   | UserUser        |
       | helpdesk22@cybertekschool.co  | UserU           |
-      | r1@cybertekschool.com         | UserUs          |
+      | hr1@cybertekschool.com        | UserUs          |
       | hr22@cybertekschool.com       | UserUse         |
       | arketing1@cybertekschool.com  | UserUse         |
       | marketing22@cybertekschool.co | UserUse         |
