@@ -5,14 +5,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage {
+public class LoginPage_JM extends BasePage{
 
-    public LoginPage() {
+    public LoginPage_JM() {
 
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    // test commit and push to confirm up flow to our remote repo
+
 
     @FindBy(xpath = "//input[@name='USER_LOGIN']")
     public WebElement txt_Login;
@@ -38,6 +38,13 @@ public class LoginPage {
     @FindBy(xpath = "//div[@class='errortext']")
     public WebElement incorrectLoginText;
 
+
+    public void logIn(String username, String password) {
+
+        txt_Login.sendKeys(username);
+        txt_Password.sendKeys(password);
+        btn_LogIn.click();
+    }
 
 
 
