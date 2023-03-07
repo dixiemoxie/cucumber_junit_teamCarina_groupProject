@@ -5,7 +5,7 @@ Feature: Login Functionality
   Background:
     Given user is on the login page
 
-  @B28G11-98
+
   Scenario: Verify login with valid credentials and land on the user dashboard page
     When user logs in as "Human Resource"
     Then user should land on the dashboard page
