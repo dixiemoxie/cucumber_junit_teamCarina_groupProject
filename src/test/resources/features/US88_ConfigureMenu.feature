@@ -8,7 +8,7 @@
       And user clicks login button
       Then user should land on the dashboard page
 
-    @US88
+    @B28G11-88
       Scenario: As a user I should be able to configure the menu
       When the user is on the home page
       And clicks Configure Menu button
