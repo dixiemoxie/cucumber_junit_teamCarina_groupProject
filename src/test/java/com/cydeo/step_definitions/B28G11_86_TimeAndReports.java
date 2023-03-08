@@ -32,6 +32,7 @@ Assert.assertTrue(timeAndReportsPage.absenceChartLink.isDisplayed());
 Assert.assertTrue(timeAndReportsPage.workTimeLink.isDisplayed());
 Assert.assertTrue(timeAndReportsPage.bitrixLink.isDisplayed());
 Assert.assertTrue(timeAndReportsPage.workReportsLink.isDisplayed());
+Assert.assertTrue(timeAndReportsPage.meetingsLink.isDisplayed());
 
     }
 }

@@ -22,5 +22,8 @@ public class B28G11_86_TimeAndReportsPage {
     @FindBy (xpath="//span[.='Work Reports']")
     public WebElement workReportsLink;
 
+    @FindBy (xpath = "//span[.='Meetings and Briefings']")
+    public  WebElement meetingsLink;
+
 
 }
