@@ -6,7 +6,7 @@ Feature: Time and reports page
     And user enters "UserUser" in password field
     And user clicks login button
     Then user should land on the dashboard page
-  @B28G11_86
+  @B28G11-115
   Scenario: As a user I want to access "Time and Reports" page
     When user is on the home page
     And clicks Time and Reports on the left side of the page
