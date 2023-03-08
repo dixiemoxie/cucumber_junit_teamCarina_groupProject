@@ -1,7 +1,9 @@
 package com.cydeo.step_definitions;
 
 import com.cydeo.pages.B28G11_80_86_homePage;
+import com.cydeo.pages.B28G11_86_TimeAndReportsPage;
 import com.cydeo.utils.Driver;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -21,6 +23,15 @@ public class B28G11_86_TimeAndReports {
 
         String expectedTitle = "Absence Chart";
         Assert.assertEquals(Driver.getDriver().getTitle(),expectedTitle);
+
+    }
+B28G11_86_TimeAndReportsPage timeAndReportsPage = new B28G11_86_TimeAndReportsPage();
+    @And("see all the modules at the top of the page")
+    public void seeAllTheModulesAtTheTopOfThePage() {
+Assert.assertTrue(timeAndReportsPage.absenceChartLink.isDisplayed());
+Assert.assertTrue(timeAndReportsPage.workTimeLink.isDisplayed());
+Assert.assertTrue(timeAndReportsPage.bitrixLink.isDisplayed());
+Assert.assertTrue(timeAndReportsPage.workReportsLink.isDisplayed());
 
     }
 }

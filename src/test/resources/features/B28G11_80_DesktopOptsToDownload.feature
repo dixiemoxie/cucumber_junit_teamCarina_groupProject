@@ -6,7 +6,7 @@ Feature: Options to download
     And user enters "UserUser" in password field
     And user clicks login button
     Then user should land on the dashboard page
-@B28G11_80
+  @B28G11-112
   Scenario: As a user I should be able to see desktop options to download
 
     When user is on the home page
