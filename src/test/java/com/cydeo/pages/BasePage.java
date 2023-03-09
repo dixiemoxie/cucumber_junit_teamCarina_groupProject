@@ -87,7 +87,11 @@ public abstract class BasePage {
     @FindBy(xpath = "(//a[@href='https://play.google.com/store/apps/details?id=com.bitrix24.android'])[2]")
     public WebElement link_mobileApplicationGooglePlay;
 
+    @FindBy(xpath = "//div[@id='user-block']")
+    public WebElement userProfileBtn;
 
+    @FindBy(xpath = "//span[contains(text(), 'My Profile')]")
+    public WebElement myProfileLink;
 
 
     public void clickOptionsOnLeft(String text) {

@@ -1,6 +1,5 @@
 package com.cydeo.step_definitions;
 
-import com.cydeo.pages.US84_HomePage;
 import com.cydeo.pages.US84_ProfilePage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -10,17 +9,16 @@ import org.openqa.selenium.WebElement;
 
 public class US84_ProfilePage_StepDefs {
 
-    US84_HomePage homePage = new US84_HomePage();
     US84_ProfilePage profilePage = new US84_ProfilePage();
 
     @When("user clicks on user profile")
     public void userClicksOnUserProfile() {
-        homePage.userProfileOptions.click();
+        profilePage.userProfileBtn.click();
     }
 
     @And("clicks on my profile")
     public void clicksOnMyProfile() {
-        homePage.myProfileLink.click();
+        profilePage.myProfileLink.click();
     }
 
     @Then("user should see all five options under the user profile")
