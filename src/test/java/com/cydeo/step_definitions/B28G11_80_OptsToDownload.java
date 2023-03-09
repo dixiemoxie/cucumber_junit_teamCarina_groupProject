@@ -1,7 +1,6 @@
 package com.cydeo.step_definitions;
 
 import com.cydeo.pages.B28G11_80_86_homePage;
-import com.cydeo.pages.LoginPage;
 import com.cydeo.utils.ConfigurationReader;
 import com.cydeo.utils.Driver;
 import io.cucumber.java.en.Then;
@@ -9,8 +8,6 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 
 public class B28G11_80_OptsToDownload {
-
-    LoginPage loginPage = new LoginPage();
 
 
     @When("user is on the home page")
