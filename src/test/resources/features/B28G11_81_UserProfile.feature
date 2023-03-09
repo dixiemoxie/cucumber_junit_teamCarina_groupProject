@@ -10,7 +10,7 @@ Feature: User Profile Functionality
 
 
 
-  @B28G11_81
+  @B28G11-126
   Scenario: user profile five options verifications
 
     When click on the user profile
