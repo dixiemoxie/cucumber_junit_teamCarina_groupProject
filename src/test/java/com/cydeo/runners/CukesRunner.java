@@ -12,8 +12,8 @@ import org.junit.runner.RunWith;
                   "me.jvt.cucumber.report.PrettyReports:target/cucumber"},
         features ="src/test/resources/features",
         glue = "com/cydeo/step_definitions",
-        tags = "@wip",
-        dryRun = true,
+        tags = "@us89",
+        dryRun = false,
         publish = true
 )
 

@@ -4,6 +4,9 @@ import com.cydeo.pages.CompanyPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
+
+import java.util.List;
 
 public class US89_StepDefs {
 
@@ -21,9 +24,13 @@ public class US89_StepDefs {
 
     }
 
-    @Then("user verifies if {string} is displayed")
-    public void user_verifies_is_displayed(String string) {
 
+    @Then("user verifies if WebElements are displayed")
+    public void userVerifiesIfWebElementsAreDisplayed (List<String> expectedText) {
+
+
+
+        Assert.assertEquals(expectedText, companyPage.getTextOfElementList());
 
 
     }

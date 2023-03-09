@@ -1,20 +1,17 @@
+@us89
 Feature: Company Page functionality
   Agile Story: As a user I should be able to access to the Company page
 
   Background:
     Given user is on the login page
-    When user enters username
-   And user enters password
-   Then user clicks login button
+    When user logs in as "Human Resource"
+    Then user should land on the dashboard page
 
-  @wip
-  Scenario Outline: User inspect Company page
-    Given user is on the home page
+
+  Scenario: User inspect Company page
     When user clicks Company module
-    Then user verifies if "<module>" is displayed
+    Then user verifies if WebElements are displayed
 
-    Examples:
-      | module               |
       | Official Information |
       | Our Life             |
       | About Company        |

@@ -5,6 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class CompanyPage {
 
     public CompanyPage(){
@@ -33,6 +36,22 @@ public class CompanyPage {
 
     @FindBy (xpath = "//div[@id='top_menu_id_about_1740701591']/a")
     public WebElement BusinessNewsButton;
+
+    @FindBy (xpath = "//span[@class='main-buttons-item-text-title']")
+    public List<WebElement> listOfElements;
+
+
+    public List<String> getTextOfElementList (){
+
+        List<String> list = new ArrayList<>();
+
+        for (WebElement eachElement : listOfElements){
+
+           list.add(eachElement.getText()) ;
+        }
+
+        return list;
+    }
 
 
 
