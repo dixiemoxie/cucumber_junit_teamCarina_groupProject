@@ -12,12 +12,6 @@ public class US89_StepDefs {
 
     CompanyPage companyPage = new CompanyPage();
 
-    @Given("user is on the home page")
-    public void user_is_on_the_home_page() {
-
-
-    }
-
     @When("user clicks Company module")
     public void user_clicks_company_module() {
     companyPage.CompanyButton.click();
