@@ -1,7 +1,6 @@
 package com.cydeo.step_definitions;
 
-import com.cydeo.pages.CompanyPage;
-import io.cucumber.java.en.Given;
+import com.cydeo.pages.US89_CompanyPage;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -10,13 +9,7 @@ import java.util.List;
 
 public class US89_StepDefs {
 
-    CompanyPage companyPage = new CompanyPage();
-
-    @Given("user is on the home page")
-    public void user_is_on_the_home_page() {
-
-
-    }
+    US89_CompanyPage companyPage = new US89_CompanyPage();
 
     @When("user clicks Company module")
     public void user_clicks_company_module() {

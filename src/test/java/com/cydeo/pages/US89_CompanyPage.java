@@ -8,9 +8,9 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CompanyPage {
+public class US89_CompanyPage {
 
-    public CompanyPage(){
+    public US89_CompanyPage(){
 
         PageFactory.initElements(Driver.getDriver(), this);
 
