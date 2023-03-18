@@ -5,12 +5,12 @@ Feature: Login Functionality
   Background:
     Given user is on the login page
 
-
+  @smoke
   Scenario: Verify login with valid credentials and land on the user dashboard page
     When user logs in as "Human Resource"
     Then user should land on the dashboard page
 
-
+  @regression
   Scenario Outline: Verify user sees error message when logging in with invalid credentials
     When user enters "<invalidusername>" in login field
     And user enters "<invalidpassword>" in password field
